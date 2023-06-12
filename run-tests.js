@@ -209,6 +209,8 @@ async function main() {
     )
   }
 
+  console.log('--------------------- get enabledTests, set testslist', {tests})
+
   let testNames = [
     ...new Set(
       tests.map((f) => {
@@ -218,6 +220,8 @@ async function main() {
       })
     ),
   ]
+
+  console.log()
 
   if (groupArg) {
     const groupParts = groupArg.split('/')
